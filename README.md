@@ -17,6 +17,6 @@ You can click the Preview link to take a look at your changes.
 ![RTOS](https://img.shields.io/badge/-RTOS-F7DF1E?style=flat-square&logo=RTOS&logoColor=black)
 ![C++](https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
 ![C](https://img.shields.io/badge/-C-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
-![Linux](https://img.shields.io/badge/-Linux-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![Linux](https://img.shields.io/badge/-Linux-00599C?style=flat-square&logo=LINUX%2B%2B&logoColor=white)
 
 
