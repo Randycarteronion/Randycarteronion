@@ -18,5 +18,5 @@ You can click the Preview link to take a look at your changes.
 ![C++](https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
 ![C](https://img.shields.io/badge/-C-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
 
-
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
 
