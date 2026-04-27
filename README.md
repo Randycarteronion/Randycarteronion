@@ -1,4 +1,4 @@
-- 👋 Hello, human! I'm @Randycarter. I chose this name to honor Randolph Carter, a character from my favorite sci-fi and horror writer, H.P. Lovecraft.
+- 👋 Hello, human! I'm Randycarter. I chose this name to honor Randolph Carter, a character from my favorite sci-fi and horror writer, H.P. Lovecraft.
 - 👀 I'm interested in art pieces and elegant code.
   🐒这世界有很多的可能性 然而 然而
 
