@@ -2,6 +2,7 @@
   one of my favorite science fiction and horror writers.
   - I'm interested in works of art and elegant code.
   - I'm currently learning Rust and Go.
+  -  I can't stand clueless client-side managers who pretend to be experts and act full of themselves！！！
   - 这世界有很多的可能性，然而，然而。
   - 未来会是什么样子，令人期待。
 
