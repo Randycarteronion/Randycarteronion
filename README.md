@@ -1,4 +1,4 @@
- - Hello, human! I'm randevermist. I chose this name to honor Randolph Carter, a character created by H. P. Lovecraft,
+ - Hello, humans!I love you! I'm randevermist. I chose this name to honor Randolph Carter, a character created by H. P. Lovecraft,
   one of my favorite science fiction and horror writers.
   - I'm interested in works of art and elegant code.
   - I'm currently learning Rust and Go.
