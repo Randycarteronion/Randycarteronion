@@ -1,131 +1,102 @@
 <!--
   Randycarteronion/Randycarteronion profile README.
-  Inspired by https://github.com/however-yir
-  Built on top of the 6 original skill badges (Python / RTOS / C++ / C / Linux / Go)
-  with new badges added from the 2026 enterprise AI work.
+  Written in first person, in the voice of a hardware/embedded engineer who
+  also pokes at Python tooling and is now learning Spring AI.
+  Not a copy of however-yir.
 -->
 
-# Hi, I'm Randycarteronion
+# Hi, I'm Randycarteronion (a.k.a. randevermist)
 
-AI Engineer & Backend Developer focused on **deployable, verifiable, and operable** systems — from kernel-adjacent C to enterprise Java AI platforms.
+I am a **hardware / embedded** person who also writes Python tools when I need to automate something. My GitHub login honours Randolph Carter from H. P. Lovecraft — *"The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents."*
 
-Currently working on:
+I am interested in works of art and elegant code. I am currently learning **Rust**, **Go** and (slowly) **Spring AI** so I can stop hand-soldering every time I want a smarter box.
 
-- Spring AI / RAG / Tool Calling / MCP / multi-agent orchestration
-- Java / Spring Boot enterprise backend engineering
-- Embedded systems, RTOS, and hardware-firmware integration (ESP32, etc.)
-- Cross-language systems: C / C++ / Python / Go / Vue3 / TypeScript
+I can't stand clueless client-side managers who pretend to be experts and act full of themselves!!!
 
-> *Randolph Carter nods in approval from the margin of the page.*
+这世界有很多的可能性，然而，然而。 未来会是什么样子，令人期待。
 
 ---
 
-## 精选项目矩阵 / Featured Projects
+## What I actually work on
 
-```text
-knowledgeops-agent  -> enterprise AI baseline: RAG, workflow, memory, evaluation, multi-tenant
-BMS_F.F.R_R.C       -> robotic control firmware: C, real-time, deterministic
-hardware-harness    -> ESP32 / firmware / wireless bring-up (Python, C, Arduino-flavor)
-t00ls-               -> offensive security toolkit snippets (Python, Bash)
-Ai-Thinker-ESP32-CAM -> edge vision (ESP32-CAM, JPEG, Wi-Fi streaming)
-GUI_singbox_cn       -> GUI client for sing-box (proxy / networking)
-Ros-Protocol         -> smart-contract prototype (Solidity)
-```
+- **Battery management & STM32 firmware** — most of my "real" work is bare-metal C on STM32F103 + bq76920. I ship protection logic (over/under voltage, overcurrent, short-circuit, balancing) for a LiFePO4 pack.
+- **ESP32 bring-up & sensor glue** — Ai-Thinker ESP32-CAM + DHT 温湿度, the usual "first PCB after blinking an LED" stuff.
+- **Python tooling that solves one small annoyance** — auto sign-in, printer control, telegram file-id fetchers. Nothing pretty, but I use them daily.
+- **A hardware execution runtime for AI coding agents** — `hardware-harness`: let an LLM agent flash, run, observe, and test an MCU the same way it can already run shell.
+- **Smart contracts** — `Ros-Protocol`: a consent-management suite (Solidity + Hardhat) intended as a Digital Public Good (UN SDG 16).
+- **A CLI for printing on receipt printers** — `RZ_print`, which talks to 佳博 Gprinter drivers and pairs with QZ Tray.
+- **A cross-platform sing-box GUI client** — `GUI_singbox_cn`, with strong log analysis built in.
+- **A keyboard remapper** so my laptop can drive Steam Remote Play on a 32-inch display without a tiny-keyboard death.
 
-| Project | Role | Stack | Notes |
-|---|---|---|---|
-| [`knowledgeops-agent`](https://github.com/Randycarteronion/knowledgeops-agent) | Enterprise AI platform baseline | Spring AI, RAG, JWT/RBAC, MCP, MySQL, Flyway, Docker | 23 bugs fixed across multi-tenant, SSRF, SQL injection, XSS, RCE sandboxing |
-| [`BMS_F.F.R_R.C`](https://github.com/Randycarteronion/BMS_F.F.R_R.C) | Robotic / firmware control code | C, RTOS, deterministic loops | Stars: 12 |
-| [`hardware-harness`](https://github.com/Randycarteronion/hardware-harness) | Hardware bring-up and test harness | Python, C, serial | ESP32 / sensor driver path |
-| [`Ai-Thinker-ESP32-CAM`](https://github.com/Randycarteronion/Ai-Thinker-ESP32-CAM) | Edge camera streaming | C, ESP-IDF, Wi-Fi, JPEG | |
-| [`t00ls-`](https://github.com/Randycarteronion/t00ls-) | Security tooling scripts | Python, Bash | |
-| [`GUI_singbox_cn`](https://github.com/Randycarteronion/GUI_singbox_cn) | sing-box desktop GUI client | Vue, networking | |
-| [`Ros-Protocol`](https://github.com/Randycarteronion/Ros-Protocol) | Smart-contract / on-chain prototype | Solidity | |
+I also keep a fork of `however-yir/knowledgeops-agent` (`knowledgeops-agent` here) — I am reading it to learn how enterprise Spring AI agents are wired, not to claim it as my own work.
 
 ---
 
-## 技术路径 / Technical Path
+## 语言 / 工具 / 平台
 
-- **5 分钟**：浏览 [`knowledgeops-agent` README](https://github.com/Randycarteronion/knowledgeops-agent)、架构图与 quick-start，关注多租户 + Agent 沙箱 + RAG 链路。
-- **20 分钟**：阅读 `bug_track.json`（23 个 bug 的完整记录 + 修复策略）+ `CHANGELOG.md` + `evaluator-contract` CI workflow —— 验证这是一个**可跑、可观测、可被 PR 评审**的工程。
-- **深入**：从 `WorkspaceRuntime` 的沙箱边界（path 校验 + rg flag deny-list）到 `HttpMcpToolAdapter` 的 SSRF 防护；再到 `IngestionService.processQueuedJob` 的租户隔离。
-- **底层**：切到 `BMS_F.F.R_R.C` / `hardware-harness` / `Ai-Thinker-ESP32-CAM` 看 C / RTOS / 嵌入式如何做最严谨的边界检查（与 Java 沙箱是同一套思路的不同表达）。
-
----
-
-## 技术栈 / Tech Stack
-
-### 保留你原有的核心栈
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+### 我最熟的（嵌入式 + 底层）
 ![C](https://img.shields.io/badge/-C-00599C?style=flat-square&logo=c&logoColor=white)
-![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-![RTOS](https://img.shields.io/badge/-RTOS-0091BD?style=flat-square&logo=freertos&logoColor=white)
-
-### 2026 年企业 AI 工作中新增的栈
-![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/-Spring%20Boot-6DB33F?style=flat-square&logo=spring-boot&logoColor=white)
-![Spring AI](https://img.shields.io/badge/-Spring%20AI-6DB33F?style=flat-square&logo=spring&logoColor=white)
-![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![MyBatis](https://img.shields.io/badge/-MyBatis-000000?style=flat-square&logo=mybatis&logoColor=white)
-![Redis](https://img.shields.io/badge/-Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![RabbitMQ](https://img.shields.io/badge/-RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![pgvector](https://img.shields.io/badge/-pgvector-336791?style=flat-square&logo=postgresql&logoColor=white)
-![Vue.js](https://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
-![Element Plus](https://img.shields.io/badge/-Element%20Plus-409EFF?style=flat-square&logo=element&logoColor=white)
-![Bash](https://img.shields.io/badge/-Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
-![Prometheus](https://img.shields.io/badge/-Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/-Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-![Solidity](https://img.shields.io/badge/-Solidity-363636?style=flat-square&logo=solidity&logoColor=white)
+![C++](https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![STM32](https://img.shields.io/badge/-STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white)
+![FreeRTOS](https://img.shields.io/badge/-FreeRTOS-0091BD?style=flat-square&logo=freertos&logoColor=white)
 ![ESP32](https://img.shields.io/badge/-ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
+![KiCad](https://img.shields.io/badge/-KiCad-314CB6?style=flat-square&logo=kicad&logoColor=white)
+![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Bash](https://img.shields.io/badge/-Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
 
-### 学习中 / Currently Learning
+### 用来自动化日常琐事的
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Solidity](https://img.shields.io/badge/-Solidity-363636?style=flat-square&logo=solidity&logoColor=white)
+![Hardhat](https://img.shields.io/badge/-Hardhat-FFF100?style=flat-square&logo=hardhat&logoColor=black)
+![Vue](https://img.shields.io/badge/-Vue-4FC08D?style=flat-square&logo=vue.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+### 正在学 / 正在读源码
 ![Rust](https://img.shields.io/badge/-Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![Java](https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring AI](https://img.shields.io/badge/-Spring%20AI-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
 
 ---
 
-## 项目介绍 / About `knowledgeops-agent`
+## 项目目录 / What is in each repo
 
-`knowledgeops-agent` is the centerpiece of the matrix above — an **enterprise-grade AI platform** built on Spring Boot 3.4 + Spring AI 1.1.
+| Repository | What it actually is | Lang |
+|---|---|---|
+| [`BMS_F.F.R_R.C`](https://github.com/Randycarteronion/BMS_F.F.R_R.C) | CawBMS — 磷酸铁锂电池管理系统；STM32F103cbt6 + bq76920；过欠压 / 短路 / 过流保护 + 被动均衡。MIT 协议开源复刻。 | C |
+| [`Ai-Thinker-ESP32-CAM`](https://github.com/Randycarteronion/Ai-Thinker-ESP32-CAM) | Ai-Thinker ESP32-CAM 摄像头 + 温湿度传感器集成。 | C |
+| [`hardware-harness`](https://github.com/Randycarteronion/hardware-harness) | 给 AI 编码 agent 用的硬件执行 runtime：build → flash → run → observe → test，结构化反馈。 | Python |
+| [`t00ls-`](https://github.com/Randycarteronion/t00ls-) | t00ls 论坛自动签到脚本，两种范式（requests / Selenium）。 | Python |
+| [`tg_bot_fileid2`](https://github.com/Randycarteronion/tg_bot_fileid2) | 通过 TG url 拿 file_id 的小自动机，预备与 tdl 合用，未来想用 C++ 重写。 | Python |
+| [`RZ_print`](https://github.com/Randycarteronion/RZ_print) | 命令行打印参数管理 + 调用佳博 Gprinter，可配 QZ Tray。 | Python |
+| [`GUI_singbox_cn`](https://github.com/Randycarteronion/GUI_singbox_cn) | sing-box 跨平台 GUI + 日志分析。 | Vue |
+| [`steam--`](https://github.com/Randycarteronion/steam--) | Steam 远程同乐键盘映射（"让 A330 客机也能用大键盘"）。 | C# |
+| [`Ros-Protocol`](https://github.com/Randycarteronion/Ros-Protocol) | Consent Management Smart Contract Suite（Solidity + Hardhat），UN SDG 16 Digital Public Good。 | Solidity |
+| [`C-Plus-Plus2`](https://github.com/Randycarteronion/C-Plus-Plus2) | 各种数学 / ML / 算法题用 C++ 教学性实现集合。 | C++ |
+| [`ev-server`](https://github.com/Randycarteronion/ev-server) | Open e-Mobility 充电桩管理后端 fork（不是我的项目，跟着学）。 | Java |
+| [`knowledgeops-agent`](https://github.com/Randycarteronion/knowledgeops-agent) | **fork** of `however-yir/knowledgeops-agent`，用来读 Spring AI 企业级 agent 怎么搭。**不是我的项目。** | Java |
+| [`Randy.Carter1028`](https://github.com/Randycarteronion/Randy.Carter1028) | 还在加载…… | — |
 
-**What it ships today:**
-
-- **RAG pipeline** with hybrid retrieval (vector + keyword + knowledge graph + optional web search), pgvector backend, multi-tenant metadata filtering, citation footers
-- **ReAct agent** with tool calling, MCP server adapter, and a **trusted runtime sandbox** (`workspace_*` actions) that path-validates every read/write and deny-lists ripgrep flags that could pivot to command execution
-- **Deep Research** multi-agent workflow (plan → search → write) with task / step / event sourcing
-- **Memory system** with short / long / task / fact tiers, `expires_at` filtering, and daily cleanup
-- **Multi-tenant isolation** across every storage path (MySQL, conversation, memory, ingestion job, vector store)
-- **Cost governance**: per-tenant monthly budget, per-tier pricing, hard-limit guard
-- **Auth**: JWT (jjwt 0.13) + rotating API key + refresh token (one-shot revoke on reuse) + RBAC + tenant header override guard
-- **Rate limit** with proxy-aware client IP (handles nginx / k8s ingress / ALB)
-- **Observability**: Micrometer + Prometheus + structured JSON logs + MDC traceId / requestId
-
-**Engineering practices demonstrated in the repo:**
-
-- 23 documented bugs (5 high, 5 medium, ...) → 20 fixed → 3 deliberately tracked but not fixed (architectural, not code)
-- Per-bug branch + per-bug PR (some merged inline, some via fork-PR flow)
-- All 5 CI jobs green on every merged commit: `Lint / Build / Test` · `backend-quality` · `frontend` · `Secret Scan` · `evaluator-contract`
-- 500-line checkstyle ceiling enforced
-- `bug_track.json` is the single source of truth: id, title, location, description, handling, severity, discovery date, related PR
+我不维护"stars 数"之类的虚荣指标。仓库数量多是因为我把每个小实验都独立成仓，不爱用 monorepo。
 
 ---
 
-## Open Source Contributions
+## What I am reading / learning
 
-（待补充：可以列出你对 `spring-ai-alibaba/examples` 或其他上游的 PR）
+- H. P. Lovecraft 短篇集 — 我换这个名字不只是装，Randolph Carter 在 *Through the Gates of the Silver Key* 里的失重感是我能描述"调试嵌入式 race condition"的最接近文学表达。
+- **Rust** — 想在下一个无 RTOS 的小项目里用它取代 C++，看 async/await 能不能救我写裸机状态机的手。
+- **Spring AI** — fork 上述仓库是因为我对 agent / tool calling / multi-tenant RAG 完全没经验，从工程基线读比从 blog 读稳。
+- 跟着 [`knowledgeops-agent`](https://github.com/however-yir/knowledgeops-agent) 的 `bug_track.json` 学怎么写后端 PR：23 个 bug、20 个已修、5 类 CI check、checkstyle 上限、bug 编号管理……是教学材料。
 
 ---
 
-## 联系方式 / Contact
+## 联系方式 / How to reach me
 
-- GitHub: [@Randycarteronion](https://github.com/Randycarteronion)
-- 兴趣：AI 工具、嵌入式与固件、企业级后端、咖啡馆、历史、旅行、电影、足球
-- 引用 H. P. Lovecraft 笔下的 Randolph Carter 命名 — *"The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents."*
+- GitHub issues 是首选
+- 兴趣：嵌入式、固件、CLI 工具、企业 AI 后端（学）、咖啡馆、历史、旅行、电影、足球
+- 引用 Lovecraft 的话收尾吧：*"That is not dead which can eternal lie, and with strange aeons even death may die."*
 
 ---
 
