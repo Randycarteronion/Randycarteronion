@@ -9,7 +9,7 @@
 
 - Hello, humans! I love you! I'm randevermist. I chose this name to honor Randolph Carter, a character created by H. P. Lovecraft, one of my favorite science fiction and horror writers.
 - I'm interested in works of art and elegant code.
-- I'm currently learning Rust, Go and (slowly) Spring AI so I can stop hand-soldering every time I want a smarter box.
+- I'm currently learning Rust, Go and (slowly) Spring AI
 - I can't stand clueless client-side managers who pretend to be experts and act full of themselves!!!
 
 这世界有很多的可能性，然而，然而。未来会是什么样子，令人期待。
