@@ -5,7 +5,7 @@
   three-layer stack (底层 / 平台 / 应用).
 -->
 
-# Hi, I'm Randycarteronion (a.k.a. randevermist)
+# Hi, I'm randevermist
 
 - Hello, humans! I love you! I'm randevermist. I chose this name to honor Randolph Carter, a character created by H. P. Lovecraft, one of my favorite science fiction and horror writers.
 - I'm interested in works of art and elegant code.
